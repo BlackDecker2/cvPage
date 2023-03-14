@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>CV Yoel Santigo Pantoja</title>
+</head>
+<body>
+    <!-- AREA DE ENCABEZADO -->
+    <section class="inicio" id="inicio">
+        <div class="contenido-seccion">
+            <header>
+                <div class="nav-bar" onclick="mostrarOcultarMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <nav id="nav" class="nav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#sobremi">Sobre mí</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="#resumen">Resumen</a>
+                </nav>
+                <div class="logo">
+                    S<span class="color">P</span>
+                </div>
+            </header>
+                <div class="info">
+                    <div class="cols cols0">
+                        <span class="topline">Bienvenidos</span>
+                        <h4>Yo soy <span class="multiText"></span></h4>
+                    </div>
+                    <h1>Santiago Pantoja</h1>
+                    <h2>19 - Santander de Quilichao</h2>
+                    <div class="redes">
+                        <a href="https://twitter.com/YOELSANTIAGOPA1"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100005042539229"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/yoel-santiago-pantoja-estrada-703a16186/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="foto">
+                    <img src="imagenYoel.png" alt="">
+                </div>
+                <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+                <script>
+                    var typpingEffect = new Typed(".multiText", {
+                        strings : ["Estudiante", "Programador", "Musico", "Backend"],
+                        loop: true,
+                        typeSpeed: 100,
+                        backSpeed: 80,
+                        backDelay: 1500 
+                    })
+                </script>
+        </div>
+    </section>
+    
+    <!-- Contenido Personal -->
+    <section class="sobremi" id="sobremi">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Sobre Mi</h2>´
+            <h3>Detalles personales</h3>
+
+            <p class="especial">Me dedico a aprender diferentes tipos de oficios para tener multiples habilidades</p>
+            <p>La programación es un estilo de vida, y en ella puedo llevar mi imaginación</p>
+
+            <div class="fila">
+                <div class="col">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="titulo-detalle">Perfil</span>
+                    <p>Estudiante de la Universidad del Valle en Sistemas de la informacion, me he formado con diferentes modelos de aprendizaje lo que han permitido expandir mi conocimiento y ofrecerlo a la sociedad</p>
+
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-location-pin"></i>
+                    <span class="titulo-detalle">Ubicación</span>
+                    <p>Resido actualmente en la ciudad de Santander de Quilichao, en el area urbana.</p>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-flag"></i>
+                    <span class="titulo-detalle">Intereses</span>
+                    <p>Mis intereses en el area de la programacion, estan orientadas al Backend; Siempre he trabajado en un enfoque con el manejo de datos para así analizar y desarrollar multiples microservices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mis Habilidades -->
+    <section class="habilidades" id="habilidades">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">HABILIDADES</h2>
+            <h3>Mis Especialidades</h3>
+
+            <div class="fila">
+                <div class="col">
+                    <span>SQL</span>
+                    <a href="https://datademia.es/blog/que-es-sql"><i class="fa-solid fa-database"></i></a>
+                    <div class="cont-barra">
+                        <div class="barra" id="sql">
+                        </div>
+                        <span>40%</span>
+                    </div>    
+                </div>
+                <div class="col">
+                    <span>JAVASCRIPT     </span>
+                    <a href="https://lenguajejs.com/javascript/"><i class="fa-brands fa-js"></i></a>
+                    <div class="cont-barra">
+                        <div class="barra" id="javascript">
+                        </div>      
+                            <span>50%</span>
+                    </div> 
+                </div>
+            </div>    
+            <div class="fila"> 
+                <div class="col">
+                    <span>Java  </span>
+                    
+                    <a href="https://aws.amazon.com/es/what-is/java/"><i class="fa-brands fa-java"></i></a>
+                    <div class="cont-barra">
+                        <div class="barra" id="java">
+                        </div>    
+                            <span>30%</span>
+                            
+                    </div>
+                </div> 
+                <div class="col">
+                    <span>CSS  </span>
+                    <a href="https://lenguajecss.com/css/introduccion/que-es-css/"><i class="fa-brands fa-css3-alt"></i></a>
+                    <div class="cont-barra">
+                        <div class="barra" id="css">
+                        </div>
+                            <span>30%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="fila">  
+                <div class="col">
+                    <span>Spring Boot</span>
+                    <a href="https://www.ibm.com/ar-es/topics/java-spring-boot#:~:text=Java%20Spring%20Boot%20Spring%20Boot,La%20capacidad%20de%20crear%20aplicaciones"><i class="fa-solid fa-flower-tulip"></i></a>
+                    <div class="cont-barra">
+                        <div class="barra" id="spring">
+                        </div>
+                        <span>32%</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <span>Html  </span>
+                    <a href="https://developer.mozilla.org/es/docs/Web/HTML"><i class="fa-brands fa-html5"></i></a>
+                    <div class="cont-barra">
+                        <div class="barra" id="html">
+                        </div>
+                            <span>50%</span>
+                    </div>
+                </div>
+        
+            </div>
+            <div class="fila">
+                <div class="col">
+                    <span>C++   </span>
+                    <a href="https://www2.eii.uva.es/fund_inf/cpp/temas/1_introduccion/introduccion.html"><i class="fa-solid fa-c"></i></a>
+                    <div class="cont-barra">
+                        <div class="barra" id="c++">
+                        </div>      
+                            <span>45%</span>
+                    </div> 
+                </div>
+                <div class="col">
+                    <span>ingles</span>
+                    <div class="cont-barra">
+                        <div class="barra" id="ingles">
+                        </div>      
+                            <span>40%</span>
+                    </div> 
+                </div>
+            </div>
+            </div>
+    </section>
+    
+    <!-- SECCION CONTACTO -->
+    <section class="contacto" id="contacto">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Contacto</h2>
+            <h3>Recibo sugerencias!!!</h3>
+
+            <div class="fila">
+                <div class="col">
+                    <h2>
+                        <i class="fa-solid fa-phone"></i> Teléfono
+                    </h2>
+                    <span class="info-contacto">(57)323 425 0896</span>
+                </div>
+                <div class="col">
+                    <h2>
+                        <i class="fa-solid fa-envelope"></i> Correo
+                    </h2>
+                    <span class="info-contacto">yoelsant2000@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+</body>
+</html>
