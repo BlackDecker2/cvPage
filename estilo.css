@@ -49,7 +49,11 @@ html{
   padding: 0 10px;
 }
 .inicio .contenido-seccion header{
-  padding: 30px;
+    width: 90%;
+    max-width: 75em;
+    margin: auto;
+    overflow: hidden;
+    padding: 30px;
 }
 /* menu lateral */
 .inicio .contenido-seccion header nav{
@@ -72,7 +76,7 @@ html{
 
   /* ************** */
 
-  .inicio .contenido-seccion header .logo{
+  .inicio .contenido-seccion header .logo-head .logo{
     font-weight: bold;
     font-size: 2.5rem;
     font-family: "Yellowtail";
