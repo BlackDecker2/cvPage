@@ -30,7 +30,7 @@
   }
   
   .nav-link {
-    color: white;
+    color: rgb(160, 160, 160);
     text-decoration: none;
   }
   
@@ -79,11 +79,244 @@
     font-size: 30px;
     padding: 0 20px;
     line-height: 60px;
-    cursor: pointer;
-  
     display: none;
   }
+ .introduccion{
+   background: url(images/image_grey.jpg);
+ }
+
+
+  /*SECTION QUIEN*/
   
+  .introduccion .quien{
+      text-align: center;
+      margin-top: 0px;
+      margin-left: 50px;
+      width: 50%;
+      height: 70%;
+      font-size: 2vh;
+  }
+  
+  .introduccion .article{
+      text-align: center;
+      margin-top: 30px;
+      margin-left: 70px;
+      width: 50%;
+      height: 70%;
+      font-size: 2vh;
+  }
+  
+  h1{
+    font-family: 'Righteous', cursive; 
+    animation-duration: 3s;
+    animation-name: slidein;
+    color: #502c2c;
+  }
+  
+  
+
+  p{
+    font-family: 'Barlow', sans-serif;
+    animation-duration: 1s;
+    animation-name: slidein;
+    color: #000000;
+  }
+/*FORMULARIO EN ASIDE*/
+  .form{
+    margin-top: 50px;
+    color: rgb(122, 54, 54);
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  label::after {
+    content: "*";
+    color: #ff0000;
+  }
+  
+  input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+  }
+/*ANIMACION DESDE RIGHT*/
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+aside{
+  float: right;
+  border: 1px solid rgb(255, 255, 255);
+  width: 30%;
+  height: 100%;
+  font-size: 2vh;
+}
+
+/*aside {
+  width: 20%;
+  float: right;
+  background-color: #e0e0e0;
+  border-left: 1px solid white;
+}*/
+
+
+/*Div enfoque*/
+.bloques {
+  text-align: center;
+  display: flex;
+  background: #a09d9d;
+  margin-top: 30px;
+}
+
+.bloque {
+  flex: 1;
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.img-container {
+  margin-top: 100px;
+  margin-left: 70px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10%;
+}
+
+img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10%;
+}
+
+.img-container:before {
+  content: "";
+  position: none;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 75%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10%;
+}
+
+.img-container:hover:before {
+  opacity: 1;
+}
+
+.img-container:hover img {
+  transform: scale(1.1);
+}
+
+p {
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  padding: 10px;
+}
+
+.bloque:hover p {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+
+/*DIV HOBBIES*/
+.hobbies {
+  background-color: #f0f0f0;
+  padding: 50px;
+}
+
+.hobbies h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hobbies ul {
+  margin-top: 70px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.hobbies li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #ccc;
+  background-color: rgb(161, 136, 136);
+}
+
+/*FOTTER*/
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/*BOTON DESPLAZAMIENTO*/
+#myBtn {
+  display: none; /* Oculta el botón por defecto */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(58, 54, 54);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #333;
+}
+
+/* Muestra el botón después de desplazarse hacia abajo 20px */
+@media screen and (max-width: 768px) {
+  #myBtn {
+    bottom: 30px;
+    right: 20px;
+  }
+}
+
+/* Icono del botón */
+.fa-chevron-up {
+  transform: rotate(-45deg);
+}
+
+
   /* MOBILE */
   @media (max-width: 768px) {
     body {
@@ -139,3 +372,18 @@
       outline: none;
     }
   }
+
+  @media only screen and (min-width: 1024px){
+    .to-top{
+    height: 50px;
+    width: 50px;
+    right: 0px;
+    bottom: 30px;
+  }
+}
+@media only screen and (min-width: 768px){
+.to-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}

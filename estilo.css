@@ -343,10 +343,47 @@ h4{
 .contacto .contenido-seccion .fila .col h2{
   color: #572020;
 }
+
+
+/*BOTON DESPLAZAMIENTO*/
+#myBtn {
+  display: none; /* Oculta el botón por defecto */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: rgb(58, 54, 54);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #333;
+}
+
+/* Muestra el botón después de desplazarse hacia abajo 20px */
+@media screen and (max-width: 768px) {
+  #myBtn {
+    bottom: 30px;
+    right: 20px;
+  }
+}
+
+/* Icono del botón */
+.fa-chevron-up {
+  transform: rotate(-45deg);
+}
+
 /* SECCION RESPONSIVE */
-@media screen and (max-width:800px){
+@media screen and (max-width:700px){
   .habilidades .contenido-seccion .fila{
-      display: block;
+      display: initial;
+
   }
   .habilidades .contenido-seccion .fila .col{
       width: 100%;
