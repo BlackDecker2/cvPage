@@ -59,7 +59,7 @@ html{
 .inicio .contenido-seccion header nav{
   position: fixed;
   margin-left: 60px;
-  background-color: #882020;
+  background-color: #000000;
   padding: 15px;
   border-radius: 10px;
   text-align: left;
@@ -80,7 +80,7 @@ html{
     font-weight: bold;
     font-size: 2.5rem;
     font-family: "Yellowtail";
-    text-shadow: 0 0 35px #ff0202;
+    text-shadow: 0 0 35px #ff0000;
   }
 
   .inicio .contenido-seccion header .logo .color{
@@ -90,7 +90,7 @@ html{
 
   .inicio .contenido-seccion header .nav-bar{
     position: absolute;
-    background-color: #861111;
+    background-color: #000000;
     font-size: 20px;
     width: 50px;
     height: 50px;
@@ -101,7 +101,7 @@ html{
   }
 /**animacion del bottom*/
   .inicio .contenido-seccion header .nav-bar:hover{
-    box-shadow: 0 0 35px rgb(197, 19, 19)
+    box-shadow: 0 0 35px rgb(0, 0, 0)
   }
 
   .inicio .contenido-seccion .info{
@@ -129,7 +129,7 @@ html{
     text-decoration: none;
     background-color: #000;
     color: rgb(197, 19, 19);
-    border: 1px solid rgb(253, 3, 3);
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -139,14 +139,14 @@ html{
   }
 
   .inicio .contenido-seccion .info .redes a:hover{
-    color:rgb(255, 0, 0);
+    color:rgb(0, 0, 0);
     background-color:rgb(248, 247, 247);
-    box-shadow: 0 0 20px rgb(197, 19, 19);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
   }
   .inicio .contenido-seccion .foto{
     position: relative; 
   }
-
+  
   .inicio .contenido-seccion .foto img{
     max-width: 200px;
     border-radius: 50%;
@@ -155,6 +155,8 @@ html{
     left: 50%;
     top: -100px;
     transform: translateX(-50%);
+    transition: transform 0.3s ease-in-out;
+    
   }
 /*Div Animacion*/
 .wrapper{
@@ -181,7 +183,7 @@ html{
   position: relative;
   font-size: 35px;
   letter-spacing: 5px;
-  color: #b32626;
+  color: #a7a7a7;
 }
 
 .topline::after{
@@ -199,7 +201,7 @@ h4{
   display: block;
   font-size: 2.7rem;
   letter-spacing: 5px;
-  color: #b32626;
+  color: #000000;
 }
 
 .multiText{
@@ -242,7 +244,7 @@ h4{
 .sobremi .contenido-seccion p{
   max-width: 700px;
   margin: auto;
-  color: #666;
+  color: #333232;
 }
 
 .sobremi .contenido-seccion .fila{
@@ -254,6 +256,16 @@ h4{
 .sobremi .contenido-seccion .fila .col{
   width: 30%;
 }
+/* Agrega una animación de escala solo al hacer hover en los elementos .col */
+.col {
+  transition: transform 0.3s ease-in-out;
+}
+
+.col:hover {
+  transform: scale(1.1); /* Cambia el valor de escala para ajustar la animación */
+}
+
+
 
 
 .sobremi .contenido-seccion .fila .col i{

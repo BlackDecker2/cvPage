@@ -13,7 +13,7 @@
   }
   
   .header {
-    background-color: #692929;
+    background-color: #130f0f;
     height: 80px;
     position: fixed;
     width: 100%;
@@ -24,28 +24,17 @@
   .nav {
     display: flex;
     justify-content: space-between;
-  
+    z-index: 100;
     max-width: 992px;
     margin: 0 auto;
   }
   
   .nav-link {
-    color: rgb(160, 160, 160);
+    color: rgb(255, 255, 255);
     text-decoration: none;
   }
   
-  .logo {
-    font-weight: bold;
-    font-size: 3rem;
-    font-family: "Yellowtail";
-    text-shadow: 0 0 35px #ff0000;
-  }
-  .color{
-    font-size: 3rem;
-    color: rgb(204, 29, 29);
-    font-family: "Yellowtail";
-    text-shadow: 0 0 35px #ffffff;
-  }
+  
   .nav-menu {
     display: flex;
     margin-right: 40px;
@@ -108,15 +97,17 @@
   
   h1{
     font-family: 'Righteous', cursive; 
+    font-size: 20px;
     animation-duration: 3s;
     animation-name: slidein;
-    color: #502c2c;
+    color: #000000;
   }
   
   
 
   p{
     font-family: 'Barlow', sans-serif;
+   font-size: medium;
     animation-duration: 1s;
     animation-name: slidein;
     color: #000000;
@@ -229,11 +220,21 @@ img {
   transform: scale(1.1);
 }
 
-p {
+.p_bloque {
+  margin-top: 5px;
   text-align: center;
   transition: all 0.3s ease-in-out;
   padding: 10px;
 }
+
+.p_footer{
+  color: #d6d6d6;
+  margin-top: 5px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  padding: 10px;
+}
+
 
 .bloque:hover p {
   background-color: rgba(0, 0, 0, 0.5);
@@ -266,12 +267,12 @@ p {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0px 0px 5px #ccc;
-  background-color: rgb(161, 136, 136);
+  background-color: rgb(203 203 203)
 }
 
 /*FOTTER*/
 footer {
-  background-color: #333;
+  background-color: #5d5d5ddb;
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -385,5 +386,106 @@ footer {
 .to-top {
     right: 20px;
     bottom: 20px;
+  }
+}
+
+/* SECCION RESPONSIVE */
+/* Estilos normales del logo */
+.color {
+  font-size: 3rem;
+  color: rgb(204, 29, 29);
+  font-family: "Yellowtail";
+  text-shadow: 0 0 35px #ffffff;
+}
+.logo {
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: "Yellowtail";
+  text-shadow: 0 0 35px #ff0000;
+}
+
+/* Estilos del logo en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .color {
+    font-size: 2rem;
+    text-shadow: 0 0 20px #ffffff;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 1rem;
+    text-shadow: 0 0 20px #ff0000;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .form {
+    display: none; /* Ocultar el formulario en pantallas pequeñas */
+  }
+  /* Estilos para el menú en dispositivos móviles */
+  .nav-menu_visible {
+    left: 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    background-color: #502c2c;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    left: 100%;
+    transition: left 0.3s;
+  }
+
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu_visible {
+    left: 0;
+  }
+
+  .to-top {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .introduccion .quien,
+  .introduccion .article {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .bloques {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloque {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .img-container {
+    margin: 30px auto;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .p_bloque {
+    margin-top: 10px;
   }
 }

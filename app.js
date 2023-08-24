@@ -10,6 +10,8 @@ function mostrarOcultarMenu(){
         menu_visible = false;
     }
 }
+
+
 //oculto el menu una vez que selecciono una opción
 let links = document.querySelectorAll("nav a");
 for(var x = 0; x <links.length;x++){
@@ -25,6 +27,30 @@ function crearBarra(id_barra){
         id_barra.appendChild(div);
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const readableElements = document.querySelectorAll("[data-readaloud]");
+    const synth = window.speechSynthesis;
+    let activeUtterance = null;
+
+    readableElements.forEach(element => {
+        element.addEventListener("mouseover", function() {
+            const textToRead = element.getAttribute("data-readaloud");
+            activeUtterance = new SpeechSynthesisUtterance(textToRead);
+            synth.speak(activeUtterance);
+        });
+
+        element.addEventListener("mouseout", function() {
+            if (activeUtterance) {
+                synth.cancel();
+                activeUtterance = null;
+            }
+        });
+    });
+});
+
+
 
 //selecciono todas las barras generales par aluego manipularlas
 let html = document.getElementById("html");
