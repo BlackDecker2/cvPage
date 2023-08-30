@@ -7,6 +7,48 @@ navToggle.addEventListener('click', () => {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  const readableElements = document.querySelectorAll("[data-readaloud]");
+  const synth = window.speechSynthesis;
+  let activeUtterance = null;
+  let readerActive = false;
+
+  function toggleReader() {
+      readerActive = !readerActive;
+      if (!readerActive && activeUtterance) {
+          synth.cancel();
+          activeUtterance = null;
+      }
+
+      const toggleButton = document.getElementById("toggleButton");
+      toggleButton.style.backgroundColor = readerActive ? "green" : "red";
+      toggleButton.textContent = readerActive ? "ON" : "OFF";
+  }
+
+  const toggleButton = document.getElementById("toggleButton");
+  toggleButton.addEventListener("click", toggleReader);
+
+  readableElements.forEach(element => {
+      element.addEventListener("mouseover", function() {
+          if (readerActive) {
+              const textToRead = element.getAttribute("data-readaloud");
+              activeUtterance = new SpeechSynthesisUtterance(textToRead);
+              synth.speak(activeUtterance);
+          }
+      });
+
+      element.addEventListener("mouseout", function() {
+          if (activeUtterance) {
+              synth.cancel();
+              activeUtterance = null;
+          }
+      });
+  });
+});
+
+
+
+
 // Muestra el botón después de desplazarse hacia abajo 20px
 
 function scrollFunction() {

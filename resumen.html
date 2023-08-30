@@ -7,15 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, maximum-scale=2"/>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,500;1,400&family=Righteous&display=swap');
-    </style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,500;1,400&family=Righteous&display=swap');
+      @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700&family=Yellowtail&display=swap');
+  </style>
     <link rel="stylesheet" href="estiloResumen.css">
+
     <title>Resumen</title>
 </head>
 <body>
         <header class="header">
           <nav  class="nav">
-            <div class="color">
+            <div class="color" data-readaloud="logo" href="index.html">
             S<a href="index.html" class="logo nav-link">P</a>
             </div>
             <button class="nav-toggle" aria-label="Abrir menú">
@@ -23,36 +26,53 @@
             </button>
             <ul class="nav-menu">
               <li class="nav-menu-item">
-                <a href="#quien" class="nav-menu-link nav-link">Quien soy</a>
+                <a href="#quien" class="nav-menu-link nav-link" data-readaloud="quien soy">Quien soy</a>
               </li>
               <li class="nav-menu-item">
-                <a href="#bloques" class="nav-menu-link nav-link">Enfoque</a>
+                <a href="#bloques" class="nav-menu-link nav-link" data-readaloud="enfoque">Enfoque</a>
               </li>
               <li class="nav-menu-item">
-                <a href="#hobbies" class="nav-menu-link nav-link">Hobbies</a>
+                <a href="#hobbies" class="nav-menu-link nav-link" data-readaloud="mis hobbies">Hobbies</a>
               </li>
+              <li>
+                <button class="nav-bar" id="toggleButton">Lector</button>
+              </li>
+              
+
+              
             </ul>
           </nav>
         </header>
         <div class="introduccion" id="quien">
+          
             <aside class="sidebar">
               <form class="form" action="mailto:yoelsant2000@gmail.com" method="POST">
+                
                 <h2>Contacto</h2>
-                <label for="nombre">Nombre:</label>
+                <label for="nombre" data-readaloud="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
           
-                <label for="email">Email:</label>
+                <label for="email" data-readaloud="email">Email:</label>
                 <input type="email" id="email" name="email" required>
           
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required>Me interesa tu perfil</textarea>
+                <label for="mensaje" data-readaloud="mensaje">Mensaje:</label>
+                <textarea  id="mensaje" name="mensaje" required>Me interesa tu perfil</textarea>
           
-                <button type="submit">Enviar</button>
+                <button type="submit" data-readaloud="enviar">Enviar</button>
               </form>
             </aside>
           <section class="quien">
-              <h1>Quién soy</h1>
-              <p>Hola, soy Yoel Santiago Pantoja Estrada y nací en Cali, Valle del Cauca en el año 2003. Actualmente tengo 19 años y estoy estudiando una tecnología en la Universidad del Valle, enfocándome en la programación backend utilizando tecnologías como Spring Boot, SQL y JavaScript.
+              <h1 data-readaloud="quien soy">Quién soy</h1>
+              <p data-readaloud="Hola, soy Yoel Santiago Pantoja Estrada y nací en Cali, Valle del Cauca en el año 2003. Actualmente tengo 19 años y estoy estudiando una tecnología en la Universidad del Valle, enfocándome en la programación backend utilizando tecnologías como Spring Boot, SQL y JavaScript.
+
+              Desde que era joven, siempre he sido muy interesado en la programación y la música. Mi pasión por la programación comenzó cuando comencé a aprender HTML y CSS por mi cuenta, y desde entonces he adquirido habilidades en diferentes lenguajes de programación, incluyendo JavaScript, SQL y Spring Boot.
+              
+              Durante mi tiempo en la universidad, he sido un estudiante dedicado y comprometido, obteniendo buenos resultados académicos y participando en diferentes proyectos y actividades. He tenido la oportunidad de trabajar en proyectos de desarrollo web utilizando tecnologías como Spring Boot, HTML, CSS y JavaScript, lo que me ha permitido adquirir experiencia práctica en el mundo real.
+              
+              A pesar de mi corta edad, ya he logrado algunos hitos importantes en mi carrera, como el desarrollo de aplicaciones web y microservices para proyectos y trabajos personales.
+              
+              En resumen, soy un joven apasionado y dedicado a la programación y la música, que está trabajando arduamente para convertirse en un programador backend altamente capacitado y exitoso</p>
+        ">Hola, soy Yoel Santiago Pantoja Estrada y nací en Cali, Valle del Cauca en el año 2003. Actualmente tengo 19 años y estoy estudiando una tecnología en la Universidad del Valle, enfocándome en la programación backend utilizando tecnologías como Spring Boot, SQL y JavaScript.
 
                 Desde que era joven, siempre he sido muy interesado en la programación y la música. Mi pasión por la programación comenzó cuando comencé a aprender HTML y CSS por mi cuenta, y desde entonces he adquirido habilidades en diferentes lenguajes de programación, incluyendo JavaScript, SQL y Spring Boot.
                 
@@ -63,9 +83,18 @@
                 En resumen, soy un joven apasionado y dedicado a la programación y la música, que está trabajando arduamente para convertirse en un programador backend altamente capacitado y exitoso</p>
           </section>
           <article class="article">
-            <h1>Las tecnologías backend y Angular para este año</h1>
+            <h1 data-readaloud="las tecnologias backend y angular para este año">Las tecnologías backend y Angular para este año</h1>
 
-            <p>Como desarrollador, siempre he sido apasionado por las tecnologías backend y su capacidad para proporcionar soluciones escalables y seguras para una amplia gama de aplicaciones. Sin embargo, también he reconocido la importancia de las tecnologías frontend y la necesidad de un enfoque equilibrado en ambas áreas.
+            <p data-readaloud="Como desarrollador, siempre he sido apasionado por las tecnologías backend y su capacidad para proporcionar soluciones escalables y seguras para una amplia gama de aplicaciones. Sin embargo, también he reconocido la importancia de las tecnologías frontend y la necesidad de un enfoque equilibrado en ambas áreas.
+
+            Este año, mi objetivo es expandir mis habilidades en el desarrollo frontend, particularmente en Angular. Angular es un marco de desarrollo de aplicaciones web que permite la creación de aplicaciones SPA (Single Page Application) altamente interactivas y escalables. A medida que el uso de aplicaciones web continúa creciendo, Angular se ha convertido en una de las herramientas más populares para desarrollar aplicaciones web modernas.
+            
+            Sin embargo, también entiendo la importancia de las tecnologías backend para el desarrollo de aplicaciones web. Las tecnologías backend, como Node.js, Spring Boot y Django, son cruciales para proporcionar una base sólida y segura para el desarrollo de aplicaciones web. Estas tecnologías son responsables de manejar las solicitudes de los usuarios, almacenar y recuperar datos y gestionar la seguridad y la privacidad de los datos de los usuarios.
+            
+            A medida que mi enfoque se expande hacia el desarrollo frontend, también estoy trabajando en mejorar mis habilidades en las tecnologías backend. Mi objetivo es crear una base sólida de conocimiento en ambas áreas, para poder diseñar y desarrollar aplicaciones web de manera más efectiva y eficiente.
+            
+            En resumen, como desarrollador, creo firmemente en la importancia de un enfoque equilibrado en el desarrollo de aplicaciones web. Este año, mi enfoque se centrará en mejorar mis habilidades en Angular mientras continúo expandiendo mis conocimientos en las tecnologías backend. Al hacerlo, espero poder proporcionar soluciones web más eficientes y efectivas para una amplia gama de aplicaciones.</p>
+        ">Como desarrollador, siempre he sido apasionado por las tecnologías backend y su capacidad para proporcionar soluciones escalables y seguras para una amplia gama de aplicaciones. Sin embargo, también he reconocido la importancia de las tecnologías frontend y la necesidad de un enfoque equilibrado en ambas áreas.
 
               Este año, mi objetivo es expandir mis habilidades en el desarrollo frontend, particularmente en Angular. Angular es un marco de desarrollo de aplicaciones web que permite la creación de aplicaciones SPA (Single Page Application) altamente interactivas y escalables. A medida que el uso de aplicaciones web continúa creciendo, Angular se ha convertido en una de las herramientas más populares para desarrollar aplicaciones web modernas.
               
@@ -80,29 +109,30 @@
               <div class="img-container">
                 <img src="images/htmlIA.png" alt="Imagen 1">
               </div>
-              <p class="p_bloque">En resumen, como desarrollador de backend, estoy comprometido en crear soluciones eficientes y escalables que garanticen la seguridad y la calidad de las aplicaciones. Me apasiona mi trabajo y estoy emocionado de continuar aprendiendo y creciendo en este campo en constante evolución.</p>
+              <p class="p_bloque" data-readaloud="En resumen, como desarrollador de backend, estoy comprometido en crear soluciones eficientes y escalables que garanticen la seguridad y la calidad de las aplicaciones. Me apasiona mi trabajo y estoy emocionado de continuar aprendiendo y creciendo en este campo en constante evolución.
+                ">En resumen, como desarrollador de backend, estoy comprometido en crear soluciones eficientes y escalables que garanticen la seguridad y la calidad de las aplicaciones. Me apasiona mi trabajo y estoy emocionado de continuar aprendiendo y creciendo en este campo en constante evolución.</p>
             </div>
             <div class="bloque">
               <div class="img-container">
                 <img src="images/frontend.jpg" alt="Imagen 2">
               </div>
-              <p class="p_bloque">Mi enfoque para aprender un framework de frontend, es importante entender los conceptos fundamentales de HTML, CSS y JavaScript, así como la arquitectura del lado del cliente y el funcionamiento de las solicitudes HTTP.</p>
+              <p class="p_bloque" data-readaloud="Mi enfoque para aprender un framework de frontend, es importante entender los conceptos fundamentales de HTML, CSS y JavaScript, así como la arquitectura del lado del cliente y el funcionamiento de las solicitudes HTTP">Mi enfoque para aprender un framework de frontend, es importante entender los conceptos fundamentales de HTML, CSS y JavaScript, así como la arquitectura del lado del cliente y el funcionamiento de las solicitudes HTTP.</p>
             </div>
             <div class="bloque">
               <div class="img-container">
                 <img src="images/music.jpg" alt="Imagen 3">
               </div>
-              <p class="p_bloque">Para mí, la música es una forma de arte que tiene el poder de evocar emociones y crear un ambiente único. Me encanta escuchar y tocar música como una forma de relajación y para motivarme mientras estudio o trabajo en mis proyectos.</p>
+              <p class="p_bloque" data-readaloud="Para mí, la música es una forma de arte que tiene el poder de evocar emociones y crear un ambiente único. Me encanta escuchar y tocar música como una forma de relajación y para motivarme mientras estudio o trabajo en mis proyectos.">Para mí, la música es una forma de arte que tiene el poder de evocar emociones y crear un ambiente único. Me encanta escuchar y tocar música como una forma de relajación y para motivarme mientras estudio o trabajo en mis proyectos.</p>
             </div>
           </div>
           <div class="hobbies" id="hobbies">
-            <h2>Hobbies</h2>
+            <h2  data-readaloud="hobbies">Hobbies</h2>
             <ul>
-              <li><strong>Música:</strong> Me encanta escuchar todo tipo de música y descubrir nuevos artistas y géneros. Siempre estoy buscando nuevas canciones que me inspiren y me hagan sentir bien. También disfruto tocar algunos instrumentos como la bateria y el piano en mi tiempo libre.</li>
-              <li><strong>Viajar:</strong> Explorar nuevos lugares y culturas es una de mis pasiones. Me encanta sumergirme en la vida cotidiana de otros lugares y conocer a personas de todo el mundo. Siempre trato de aprovechar al máximo mis viajes, visitando los lugares más interesantes y disfrutando de la comida local.</li>
-              <li><strong>Programación:</strong> Me fascina el mundo de la tecnología y la programación. Disfruto creando proyectos desde cero y aprendiendo nuevas habilidades para mejorar mis habilidades en este campo. Me gusta experimentar con diferentes lenguajes de programación y marcos de trabajo para poder crear aplicaciones web y móviles innovadoras.</li>
-              <li><strong>Aprender:</strong> Soy un ávido aprendiz y siempre estoy en busca de oportunidades para aprender cosas nuevas en diferentes áreas. Me gusta explorar temas que van desde la tecnología hasta la historia. Siempre estoy en busca de nuevos desafíos y oportunidades de crecimiento personal y profesional.</li>
-              <li><strong>Crear:</strong> Además de aprender, también disfruto creando cosas nuevas. Me gusta poner en práctica mi creatividad en diferentes formas, desde crear diseños y artes gráficas. Siempre trato de encontrar nuevas formas de expresar mi creatividad y compartir mis ideas con el mundo.</li>
+              <li data-readaloud=" Me encanta escuchar todo tipo de música y descubrir nuevos artistas y géneros. Siempre estoy buscando nuevas canciones que me inspiren y me hagan sentir bien. También disfruto tocar algunos instrumentos como la bateria y el piano en mi tiempo libre."><strong  data-readaloud="musica">Música:</strong> Me encanta escuchar todo tipo de música y descubrir nuevos artistas y géneros. Siempre estoy buscando nuevas canciones que me inspiren y me hagan sentir bien. También disfruto tocar algunos instrumentos como la bateria y el piano en mi tiempo libre.</li>
+              <li data-readaloud=" Explorar nuevos lugares y culturas es una de mis pasiones. Me encanta sumergirme en la vida cotidiana de otros lugares y conocer a personas de todo el mundo. Siempre trato de aprovechar al máximo mis viajes, visitando los lugares más interesantes y disfrutando de la comida local."><strong  data-readaloud="viajar">Viajar:</strong> Explorar nuevos lugares y culturas es una de mis pasiones. Me encanta sumergirme en la vida cotidiana de otros lugares y conocer a personas de todo el mundo. Siempre trato de aprovechar al máximo mis viajes, visitando los lugares más interesantes y disfrutando de la comida local.</li>
+              <li data-readaloud="Me fascina el mundo de la tecnología y la programación. Disfruto creando proyectos desde cero y aprendiendo nuevas habilidades para mejorar mis habilidades en este campo. Me gusta experimentar con diferentes lenguajes de programación y marcos de trabajo para poder crear aplicaciones web y móviles innovadoras."><strong  data-readaloud="programacion">Programación:</strong> Me fascina el mundo de la tecnología y la programación. Disfruto creando proyectos desde cero y aprendiendo nuevas habilidades para mejorar mis habilidades en este campo. Me gusta experimentar con diferentes lenguajes de programación y marcos de trabajo para poder crear aplicaciones web y móviles innovadoras.</li>
+              <li data-readaloud="Soy un ávido aprendiz y siempre estoy en busca de oportunidades para aprender cosas nuevas en diferentes áreas. Me gusta explorar temas que van desde la tecnología hasta la historia. Siempre estoy en busca de nuevos desafíos y oportunidades de crecimiento personal y profesional."><strong  data-readaloud="aprender">Aprender:</strong> Soy un ávido aprendiz y siempre estoy en busca de oportunidades para aprender cosas nuevas en diferentes áreas. Me gusta explorar temas que van desde la tecnología hasta la historia. Siempre estoy en busca de nuevos desafíos y oportunidades de crecimiento personal y profesional.</li>
+              <li data-readaloud=" Además de aprender, también disfruto creando cosas nuevas. Me gusta poner en práctica mi creatividad en diferentes formas, desde crear diseños y artes gráficas. Siempre trato de encontrar nuevas formas de expresar mi creatividad y compartir mis ideas con el mundo."><strong  data-readaloud="crear">Crear:</strong> Además de aprender, también disfruto creando cosas nuevas. Me gusta poner en práctica mi creatividad en diferentes formas, desde crear diseños y artes gráficas. Siempre trato de encontrar nuevas formas de expresar mi creatividad y compartir mis ideas con el mundo.</li>
             </ul>
           </div>
           <footer>

@@ -99,6 +99,19 @@ html{
     cursor: pointer;
     transition: .3s;
   }
+
+  .voice{
+    text-align: center;
+    position: absolute;
+    background-color: #000000;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    cursor: pointer;
+    transition: .3s;
+  }
 /**animacion del bottom*/
   .inicio .contenido-seccion header .nav-bar:hover{
     box-shadow: 0 0 35px rgb(0, 0, 0)
